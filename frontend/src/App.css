@@ -1,0 +1,144 @@
+/* ==========================================
+   DESIGN SYSTEM SYSTEM: GLASSMORPHISM DARK MODE
+   ========================================== */
+
+/* Thiết lập biến màu sắc và giá trị toàn cục */
+:root {
+  --bg-primary: #020617;        /* Nền tối sâu nhất (Slate 950) */
+  --bg-secondary: #0b1329;      /* Nền tối thứ hai cho các thẻ lớn */
+  --card-bg: rgba(15, 23, 42, 0.45); /* Nền thẻ bán trong suốt đặc trưng Glass */
+  --card-border: rgba(255, 255, 255, 0.05); /* Viền thẻ mờ */
+  
+  --accent-orange: #f97316;     /* Cam neon chủ đạo (Orange 500) */
+  --accent-emerald: #10b981;    /* Xanh lá neon (Emerald 500) */
+  --accent-rose: #f43f5e;       /* Đỏ neon cảnh báo (Rose 500) */
+  --accent-sky: #0ea5e9;        /* Xanh dương chỉ số (Sky 500) */
+  --accent-violet: #8b5cf6;     /* Tím ngọc (Violet 500) */
+}
+
+/* Reset CSS và cấu hình hiển thị mặc định */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-primary);
+  color: #f1f5f9;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Định dạng thanh cuộn (Scrollbar) cực kỳ cao cấp, mỏng và tiệp màu nền */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(2, 6, 23, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-orange);
+}
+
+/* Định dạng cấu trúc Thẻ Glassmorphic Card cao cấp */
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hiệu ứng phát sáng nhẹ khi hover vào các thẻ */
+.glass-card:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Hiệu ứng phát sáng chìm (Glow Effect) cho các góc thẻ vi phạm */
+.glass-card.border-orange-500\/20:hover {
+  border-color: rgba(249, 115, 22, 0.3);
+  box-shadow: 0 12px 40px 0 rgba(249, 115, 22, 0.05);
+}
+
+.glass-card.border-rose-500\/10:hover {
+  border-color: rgba(244, 63, 94, 0.3);
+  box-shadow: 0 12px 40px 0 rgba(244, 63, 94, 0.05);
+}
+
+.glass-card.border-emerald-500\/10:hover {
+  border-color: rgba(16, 185, 129, 0.3);
+  box-shadow: 0 12px 40px 0 rgba(16, 185, 129, 0.05);
+}
+
+/* Định dạng lưới bảng nhật ký sự cố */
+table th {
+  letter-spacing: 0.08em;
+}
+
+table tr {
+  transition: background-color 0.2s ease;
+}
+
+/* Các Animation và Keyframes đặc biệt */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s infinite ease-in-out;
+}
+
+/* Overlay lưới quét công nghệ camera (Scanline effect) */
+.aspect-video::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+  opacity: 0.15;
+}
+
+/* Bo tròn ảnh thumbnail vi phạm */
+img {
+  image-rendering: -webkit-optimize-contrast;
+}
