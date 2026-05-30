@@ -1,0 +1,30 @@
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+
+# NodeJS / React
+node_modules/
+dist/
+dist-ssr/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Databases
+backend/safety_data.db
+backend/static/violations/violation_*.jpg
+
+# IDE / System
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.system_generated/
+.gemini/
+*.log
