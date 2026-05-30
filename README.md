@@ -1,13 +1,13 @@
-# 🛡️ Hệ Thống Giám Sát An Toàn Lao Động Công Trường (Smart Construction Safety Monitoring)
+# Hệ Thống Giám Sát An Toàn Lao Động Công Trường (Smart Construction Safety Monitoring)
 
 > **Khóa Luận Tốt Nghiệp Ngành Khoa Học Máy Tính**  
 > *Hệ thống giám sát trang bị bảo hộ lao động (Mũ bảo hiểm, Áo phản quang) thời gian thực sử dụng Trí Tuệ Nhân Tạo Học Sâu (YOLOv8), FastAPI Backend và ReactJS Glassmorphic Dashboard.*
 
 ---
 
-## 🌟 Các Tính Năng Nổi Bật (Key Features)
+## Các Tính Năng Nổi Bật (Key Features)
 
-* **🧠 Động cơ AI thời gian thực:** Nhận diện 5 lớp đối tượng cốt lõi: `Person` (Người), `Helmet` (Mũ bảo hiểm), `Vest` (Áo phản quang), `No-Helmet` (Không đội mũ), và `No-Vest` (Không mặc áo phản quang).
+* **Động cơ AI thời gian thực:** Nhận diện 5 lớp đối tượng cốt lõi: `Person` (Người), `Helmet` (Mũ bảo hiểm), `Vest` (Áo phản quang), `No-Helmet` (Không đội mũ), và `No-Vest` (Không mặc áo phản quang).
 * **💻 Chế độ Hoạt động Kép Dự phòng (Dual-Mode Architecture):** 
   * *Chế độ Giả lập (Simulation Mode - Mặc định):* Động cơ suy luận động vẽ giàn giáo công trường di chuyển, mô phỏng công nhân hoạt động vật lý, phát hiện vi phạm và trigger sự cố tự động lên CSDL cục bộ (Đảm bảo chạy demo thuyết trình 100% thành công không phụ thuộc webcam hay GPU).
   * *Chế độ Thực tế (Real Mode):* Tải trọng trực tiếp mô hình YOLOv8 kết nối luồng camera RTSP/Webcam thực tế để giám sát tự động.
