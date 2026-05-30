@@ -114,8 +114,3 @@ npm run dev
 | `notes` | TEXT | Ghi chú biện pháp khắc phục của giám sát viên |
 
 ---
-
-## 👨‍💻 Tác Giả & Bản Quyền
-
-* **Đồ án Khóa Luận Tốt Nghiệp Đại Học** - Chuyên ngành Khoa học Máy tính.
-* © 2026 Bản quyền thuộc về tác giả dự án. Nghiêm cấm mọi hành vi sao chép thương mại khi chưa được sự đồng ý.
